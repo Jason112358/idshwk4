@@ -54,11 +54,11 @@ event http_reply(c: connection, version: string, code: count, reason: string)
             {
                 if(f0f_table[i] / resp_table[i] > 0.2)
                 {
-                    if(|url_table[i]| / gfw_table[i] > 0.5)
+                    if(|url_table[i]| / f0f_table[i] > 0.5)
                     {
                         print(addr_to_uri(i) + " is a scanner with ");
                         print(|url_table[i]|);
-                        print(" scan attempts on ")
+                        print(" scan attempts on ");
                         print(|f0f_table[i]|);
                         print(" urls. ");
                     }
